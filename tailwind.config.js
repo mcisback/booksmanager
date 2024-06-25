@@ -19,8 +19,6 @@ export default {
         },
     },
 
-    prefix: 'fb-',
-    
     plugins: [
         forms,
         require('flowbite/plugin')
