@@ -1,0 +1,579 @@
+[
+
+    {
+
+        "name": "To Kill a Mockingbird",
+
+        "description": "A novel about the serious issues of rape and racial inequality.",
+
+        "price": 7.99,
+
+        "cover": "https://example.com/tokillamockingbird.jpg"
+
+    },
+
+    {
+
+        "name": "1984",
+
+        "description": "A dystopian social science fiction novel and cautionary tale about the future.",
+
+        "price": 6.99,
+
+        "cover": "https://example.com/1984.jpg"
+
+    },
+
+    {
+
+        "name": "Pride and Prejudice",
+
+        "description": "A romantic novel that charts the emotional development of the protagonist Elizabeth Bennet.",
+
+        "price": 5.99,
+
+        "cover": "https://example.com/prideandprejudice.jpg"
+
+    },
+
+    {
+
+        "name": "The Great Gatsby",
+
+        "description": "A story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan.",
+
+        "price": 10.99,
+
+        "cover": "https://example.com/thegreatgatsby.jpg"
+
+    },
+
+    {
+
+        "name": "Moby-Dick",
+
+        "description": "A whaling voyage led by the obsessed Captain Ahab, who seeks revenge on the white whale Moby Dick.",
+
+        "price": 9.99,
+
+        "cover": "https://example.com/mobydick.jpg"
+
+    },
+
+    {
+
+        "name": "War and Peace",
+
+        "description": "A historical novel that tells the story of five families during the Napoleonic Wars.",
+
+        "price": 12.99,
+
+        "cover": "https://example.com/warandpeace.jpg"
+
+    },
+
+    {
+
+        "name": "The Catcher in the Rye",
+
+        "description": "A story about a few days in the life of a 16-year-old boy who has been expelled from school.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/thecatcherintherye.jpg"
+
+    },
+
+    {
+
+        "name": "Crime and Punishment",
+
+        "description": "A psychological drama about the mental anguish and moral dilemmas of a poor ex-student.",
+
+        "price": 7.49,
+
+        "cover": "https://example.com/crimeandpunishment.jpg"
+
+    },
+
+    {
+
+        "name": "The Odyssey",
+
+        "description": "An epic poem about the journey of Odysseus back to his home after the Trojan War.",
+
+        "price": 11.99,
+
+        "cover": "https://example.com/theodyssey.jpg"
+
+    },
+
+    {
+
+        "name": "The Divine Comedy",
+
+        "description": "An epic poem that describes Dante's travels through Hell, Purgatory, and Heaven.",
+
+        "price": 13.99,
+
+        "cover": "https://example.com/thedivinecomedy.jpg"
+
+    },
+
+    {
+
+        "name": "Brave New World",
+
+        "description": "A dystopian novel about a future world state of genetically modified citizens.",
+
+        "price": 9.49,
+
+        "cover": "https://example.com/bravenewworld.jpg"
+
+    },
+
+    {
+
+        "name": "The Brothers Karamazov",
+
+        "description": "A philosophical novel that enters deeply into questions of God, free will, and morality.",
+
+        "price": 10.49,
+
+        "cover": "https://example.com/thebrotherskaramazov.jpg"
+
+    },
+
+    {
+
+        "name": "Anna Karenina",
+
+        "description": "A novel about a tragic love affair and the constraints of society.",
+
+        "price": 11.49,
+
+        "cover": "https://example.com/annakarenina.jpg"
+
+    },
+
+    {
+
+        "name": "The Iliad",
+
+        "description": "An epic poem set during the Trojan War, focusing on the hero Achilles.",
+
+        "price": 10.99,
+
+        "cover": "https://example.com/theiliad.jpg"
+
+    },
+
+    {
+
+        "name": "One Hundred Years of Solitude",
+
+        "description": "A multi-generational story of the Buendía family and their town of Macondo.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/onehundredyearsofsolitude.jpg"
+
+    },
+
+    {
+
+        "name": "The Hobbit",
+
+        "description": "A fantasy novel about the adventures of Bilbo Baggins, a hobbit.",
+
+        "price": 7.49,
+
+        "cover": "https://example.com/thehobbit.jpg"
+
+    },
+
+    {
+
+        "name": "The Stranger",
+
+        "description": "A philosophical novel about an indifferent man who commits murder.",
+
+        "price": 6.99,
+
+        "cover": "https://example.com/thestranger.jpg"
+
+    },
+
+    {
+
+        "name": "Don Quixote",
+
+        "description": "A story of a man who reads too many chivalric romances and decides to become a knight-errant.",
+
+        "price": 14.99,
+
+        "cover": "https://example.com/donquixote.jpg"
+
+    },
+
+    {
+
+        "name": "Madame Bovary",
+
+        "description": "A novel about the life of a doctor's wife who has adulterous affairs and lives beyond her means.",
+
+        "price": 9.99,
+
+        "cover": "https://example.com/madamebovary.jpg"
+
+    },
+
+    {
+
+        "name": "Ulysses",
+
+        "description": "A modernist novel that parallels the structure of Homer's Odyssey.",
+
+        "price": 15.99,
+
+        "cover": "https://example.com/ulysses.jpg"
+
+    },
+
+    {
+
+        "name": "The Lord of the Rings",
+
+        "description": "An epic fantasy trilogy about the quest to destroy the One Ring.",
+
+        "price": 22.99,
+
+        "cover": "https://example.com/thelordoftherings.jpg"
+
+    },
+
+    {
+
+        "name": "The Count of Monte Cristo",
+
+        "description": "A story of a man who is wrongfully imprisoned and seeks revenge on those who betrayed him.",
+
+        "price": 11.99,
+
+        "cover": "https://example.com/thecountofmontecristo.jpg"
+
+    },
+
+    {
+
+        "name": "Wuthering Heights",
+
+        "description": "A novel about the passionate and destructive love between Heathcliff and Catherine Earnshaw.",
+
+        "price": 8.49,
+
+        "cover": "https://example.com/wutheringheights.jpg"
+
+    },
+
+    {
+
+        "name": "Jane Eyre",
+
+        "description": "A novel about the life of an orphaned girl who becomes a governess and falls in love with her employer.",
+
+        "price": 7.99,
+
+        "cover": "https://example.com/janeeyre.jpg"
+
+    },
+
+    {
+
+        "name": "Great Expectations",
+
+        "description": "A novel about the growth and personal development of an orphan named Pip.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/greatexpectations.jpg"
+
+    },
+
+    {
+
+        "name": "The Adventures of Huckleberry Finn",
+
+        "description": "A novel about a boy who runs away from home and travels down the Mississippi River.",
+
+        "price": 6.49,
+
+        "cover": "https://example.com/huckleberryfinn.jpg"
+
+    },
+
+    {
+
+        "name": "Les Misérables",
+
+        "description": "A historical novel that follows the lives and interactions of several characters in early 19th-century France.",
+
+        "price": 12.49,
+
+        "cover": "https://example.com/lesmiserables.jpg"
+
+    },
+
+    {
+
+        "name": "Alice's Adventures in Wonderland",
+
+        "description": "A fantasy novel about a young girl's adventures in a whimsical world.",
+
+        "price": 5.99,
+
+        "cover": "https://example.com/aliceinwonderland.jpg"
+
+    },
+
+    {
+
+        "name": "Frankenstein",
+
+        "description": "A novel about a scientist who creates a sapient creature in an unorthodox scientific experiment.",
+
+        "price": 6.99,
+
+        "cover": "https://example.com/frankenstein.jpg"
+
+    },
+
+    {
+
+        "name": "Dracula",
+
+        "description": "A gothic horror novel about Count Dracula's attempt to move from Transylvania to England.",
+
+        "price": 8.49,
+
+        "cover": "https://example.com/dracula.jpg"
+
+    },
+
+    {
+
+        "name": "The Picture of Dorian Gray",
+
+        "description": "A philosophical novel about a young man who sells his soul for eternal youth and beauty.",
+
+        "price": 7.49,
+
+        "cover": "https://example.com/thepictureofdoriangray.jpg"
+
+    },
+
+    {
+
+        "name": "The Call of the Wild",
+
+        "description": "A novel about a domesticated dog that returns to the wild.",
+
+        "price": 6.99,
+
+        "cover": "https://example.com/thecallofthewild.jpg"
+
+    },
+
+    {
+
+        "name": "The Grapes of Wrath",
+
+        "description": "A novel about the Joads, a poor family from Oklahoma, during the Great Depression.",
+
+        "price": 9.99,
+
+        "cover": "https://example.com/thegrapesofwrath.jpg"
+
+    },
+
+    {
+
+        "name": "Catch-22",
+
+        "description": "A satirical novel about World War II and the absurdities of war.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/catch22.jpg"
+
+    },
+
+    {
+
+        "name": "Slaughterhouse-Five",
+
+        "description": "A novel about a soldier's experiences during and after World War II.",
+
+        "price": 7.99,
+
+        "cover": "https://example.com/slaughterhousefive.jpg"
+
+    },
+
+    {
+
+        "name": "Beloved",
+
+        "description": "A novel about a runaway slave and her haunting past.",
+
+        "price": 9.49,
+
+        "cover": "https://example.com/beloved.jpg"
+
+    },
+
+    {
+
+        "name": "Invisible Man",
+
+        "description": "A novel about an African American man's social invisibility.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/invisibleman.jpg"
+
+    },
+
+    {
+
+        "name": "The Sun Also Rises",
+
+        "description": "A novel about American expatriates in Europe after World War I.",
+
+        "price": 7.99,
+
+        "cover": "https://example.com/thesunalsorises.jpg"
+
+    },
+
+    {
+
+        "name": "Fahrenheit 451",
+
+        "description": "A dystopian novel about a future society where books are banned and 'firemen' burn any that are found.",
+
+        "price": 8.49,
+
+        "cover": "https://example.com/fahrenheit451.jpg"
+
+    },
+
+    {
+
+        "name": "Brave New World",
+
+        "description": "A novel set in a futuristic World State of genetically modified citizens.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/bravenewworld.jpg"
+
+    },
+
+    {
+
+        "name": "Lolita",
+
+        "description": "A controversial novel about a middle-aged man's obsession with a twelve-year-old girl.",
+
+        "price": 9.99,
+
+        "cover": "https://example.com/lolita.jpg"
+
+    },
+
+    {
+
+        "name": "Of Mice and Men",
+
+        "description": "A novel about two displaced migrant ranch workers during the Great Depression.",
+
+        "price": 7.49,
+
+        "cover": "https://example.com/ofmiceandmen.jpg"
+
+    },
+
+    {
+
+        "name": "A Tale of Two Cities",
+
+        "description": "A novel set in London and Paris before and during the French Revolution.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/ataleoftwocities.jpg"
+
+    },
+
+    {
+
+        "name": "The Alchemist",
+
+        "description": "A novel about a young shepherd's journey to the Egyptian pyramids in search of treasure.",
+
+        "price": 10.99,
+
+        "cover": "https://example.com/thealchemist.jpg"
+
+    },
+
+    {
+
+        "name": "The Road",
+
+        "description": "A post-apocalyptic novel about a father and son's journey across a barren landscape.",
+
+        "price": 8.99,
+
+        "cover": "https://example.com/theroad.jpg"
+
+    },
+
+    {
+
+        "name": "Life of Pi",
+
+        "description": "A novel about a young boy who survives a shipwreck and shares a lifeboat with a Bengal tiger.",
+
+        "price": 7.99,
+
+        "cover": "https://example.com/lifeofpi.jpg"
+
+    },
+
+    {
+
+        "name": "The Book Thief",
+
+        "description": "A novel about a young girl living in Nazi Germany, narrated by Death.",
+
+        "price": 9.49,
+
+        "cover": "https://example.com/thebookthief.jpg"
+
+    },
+
+    {
+
+        "name": "Gone Girl",
+
+        "description": "A thriller novel about the disappearance of a woman and the media frenzy that follows.",
+
+        "price": 10.49,
+
+        "cover": "https://example.com/gonegirl.jpg"
+
+    }
+
+]
