@@ -2,12 +2,10 @@
 import {Head, Link, usePage} from '@inertiajs/vue3';
 import AppLayout from "@/Layouts/AppLayout.vue";
 import {getCurrentInstance, onMounted, ref} from "vue";
-import {useApiEndpoint} from "@/Compostable/useApiEndpoint.js";
 import BookCard from "@/Components/BookCard.vue";
 import AddToFavoriteButton from "@/Components/AddToFavoriteButton.vue";
 import Pagination from "@/Components/Pagination.vue";
 
-const apiEndpoint = useApiEndpoint(getCurrentInstance());
 const books = ref([]);
 let pagination = null
 
@@ -17,7 +15,6 @@ let prevPage = 0
 let nextPage = 0
 
 console.log('CURRENT PAGE: ', currentPage)
-console.log('API ENDPOINT: ', apiEndpoint)
 console.log('usePage().props: ', usePage().props)
 
 onMounted(async () => {
