@@ -33,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
 
         JsonResource::withoutWrapping();
 
+        // Fix per il prod, probabilmente manca un parametro in nginx
         if (mb_strpos(env('APP_URL'), 'https') === 0) {
             URL::forceScheme('https');
         }
