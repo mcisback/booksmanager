@@ -149,8 +149,15 @@ const cancelSearch = () => {
                     </div>
 
                     <div class="w-100 flex flex-wrap justify-items-center mt-8 gap-2">
-                        <div v-for="book in books" v-if="books" class="mx-auto mb-4">
-                            <BookCard :id="book.id" :name="book.name" :image="book.cover" :description="book.description" />
+                        <div v-for="book in books" v-if="books" class="mx-auto mb-4 min-h-96">
+                            <BookCard :id="book.id" :name="book.name" :image="book.cover" :description="book.description">
+                                <a :href="route('bookById', book.id)" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Scopri di pi&ugrave;
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                    </svg>
+                                </a>
+                            </BookCard>
                         </div>
                     </div>
 

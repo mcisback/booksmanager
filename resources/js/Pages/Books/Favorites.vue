@@ -4,6 +4,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import {getCurrentInstance, onMounted, ref} from "vue";
 import {useApiEndpoint} from "@/Compostable/useApiEndpoint.js";
 import BookCard from "@/Components/BookCard.vue";
+import AddToFavoriteButton from "@/Components/AddToFavoriteButton.vue";
 
 const apiEndpoint = useApiEndpoint(getCurrentInstance());
 const books = ref([]);
@@ -19,12 +20,12 @@ console.log('API ENDPOINT: ', apiEndpoint)
 console.log('usePage().props: ', usePage().props)
 
 onMounted(async () => {
-    const data = await fetch(`${apiEndpoint}/books/favorites`, {
+    const data = await fetch(route('api.books.favorites'), {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Authorization': `Bearer ${usePage().props.auth.token}`,
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': usePage().props.csrf
+            // 'X-CSRF-TOKEN': usePage().props.csrf
         },
     })
         .then(res => res.json())
@@ -89,7 +90,11 @@ onMounted(async () => {
 
                     <div class="w-100 flex flex-wrap justify-items-center mt-8 gap-2">
                         <div v-for="book in books" v-if="books" class="mx-auto mb-4">
-                            <BookCard :id="book.id" :name="book.name" :image="book.cover" :description="book.description" />
+                            <BookCard :id="book.id" :name="book.name" :image="book.cover" :description="book.description">
+                                <AddToFavoriteButton :book=book :isFavorited="true">
+                                    Aggiungi ai preferiti
+                                </AddToFavoriteButton>
+                            </BookCard>
                         </div>
                     </div>
 

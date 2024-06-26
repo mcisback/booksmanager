@@ -54,8 +54,7 @@ class BookController extends Controller
     }
 
     public function getFavorites() {
-        return response()->json((Auth::user()->getFavoriteItems(Book::class)->get()->all()), 200);
-        // return new BookCollection($request->user()->getFavoriteItems(Book::class)->get()->all());
+        return new BookCollection(Auth::user()->getFavoriteItems(Book::class)->paginate());
     }
 
     public function addToFavorites(Request $request, Book $book) {
