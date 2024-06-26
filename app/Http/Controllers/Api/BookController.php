@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BookCollection;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
     // Display a listing of books
     public function index()
     {
-        return response()->json(Book::all(), 200);
+        return new BookCollection(Book::paginate(16));
+        // return response()->json(Book::all(), 200);
     }
 
     // Store a newly created book
@@ -45,6 +48,17 @@ class BookController extends Controller
         ]);
 
         $book->update($validated);
+
+        return response()->json($book, 200);
+    }
+
+    public function getFavorites() {
+        return response()->json((Auth::user()->getFavoriteItems(Book::class)->get()->all()), 200);
+        // return new BookCollection($request->user()->getFavoriteItems(Book::class)->get()->all());
+    }
+
+    public function addToFavorites(Request $request, Book $book) {
+        $request->user()->toggleFavorite($book);
 
         return response()->json($book, 200);
     }
