@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Models\Book;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -17,9 +18,11 @@ Route::get('/', function () {
 
 Route::get('/books/{bookId}', function () {
     $book = Book::findOrFail(request('bookId'));
+    $isFavorited = Auth::user()->hasFavorited($book) ?? false;
 
     return Inertia::render('Books/Book', [
-        'book' => $book
+        'book' => $book,
+        'isFavorited' => $isFavorited,
     ]);
 })->middleware(['auth', 'verified'])->name('bookById');
 

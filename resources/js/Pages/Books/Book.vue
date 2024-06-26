@@ -1,13 +1,20 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import {Head, usePage} from "@inertiajs/vue3";
+import {ref} from "vue";
 
-defineProps({
+const props = defineProps({
     book: {
         type: Object,
         required: true
+    },
+    isFavorited: {
+        type: Boolean,
+        required: true
     }
 });
+
+let addedToFavorites = ref(props.isFavorited)
 
 const addToFavorite = async (book) => {
     console.log('addToFavorite: ', book)
@@ -21,8 +28,13 @@ const addToFavorite = async (book) => {
         },
     })
         .then(res => res.json())
+        .then((data) => {
+            addedToFavorites.value = data.isFavorited
 
-    console.log('addToFavorite: ', data)
+            return data
+        })
+
+    console.log('added: ', data)
 }
 </script>
 
@@ -50,7 +62,16 @@ const addToFavorite = async (book) => {
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ book.price }} €</span>
-                                <button @click="addToFavorite(book)" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Aggiungi ai preferiti</button>
+
+                                <button type="button" @click="addToFavorite(book)" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
+                                    <svg v-if="addedToFavorites" class="w-6 h-6 ms-2 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                    </svg>
+                                    <svg v-else class="w-6 h-6 ms-2 text-gray-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                    </svg>
+                                    Aggiungi ai preferiti
+                                </button>
                             </div>
                         </div>
                     </div>

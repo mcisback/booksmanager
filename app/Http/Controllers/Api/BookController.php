@@ -61,7 +61,10 @@ class BookController extends Controller
     public function addToFavorites(Request $request, Book $book) {
         $request->user()->toggleFavorite($book);
 
-        return response()->json($book, 200);
+        return response()->json([
+            'book' => $book,
+            'isFavorited' => $request->user()->hasFavorited($book),
+        ], 200);
     }
 
     // Remove the specified book
