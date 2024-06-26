@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BookCollection;
 use App\Models\Book;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Mockery\Exception;
 
 class BookController extends Controller
 {
@@ -20,16 +22,28 @@ class BookController extends Controller
     // Store a newly created book
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string',
-            'description' => 'required|string',
-            'cover' => 'required|image',
-            'price' => 'required|integer',
-        ]);
+        try {
+            $validated = $request->validate([
+                'name' => 'required|string',
+                'description' => 'required|string',
+                'cover' => 'required|string',
+                'price' => 'required|integer',
+            ]);
 
-        $book = Book::create($validated);
+            $book = Book::create($validated);
 
-        return response()->json($book, 201);
+            return response()->json([
+                'success' => true,
+                'message' => 'Libro Aggiunto',
+                'data' => $book
+            ], 201);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 201);
+        }
+
     }
 
     // Display the specified book
@@ -55,6 +69,10 @@ class BookController extends Controller
 
     public function getFavorites() {
         return new BookCollection(Auth::user()->getFavoriteItems(Book::class)->paginate());
+    }
+
+    public function getUserFavorites(Request $request, User $user) {
+        return new BookCollection($user->getFavoriteItems(Book::class)->paginate());
     }
 
     public function addToFavorites(Request $request, Book $book) {

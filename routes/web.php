@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Models\Book;
+use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,35 @@ Route::get('/books', function () {
 Route::get('/dashboard/users', function () {
     return Inertia::render('Dashboard/Users');
 })->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.users');
+
+Route::get('/dashboard/users/{user}/edit', function (User $user) {
+    return Inertia::render('Dashboard/EditUser', [
+        'user' => $user,
+    ]);
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.users.edit');
+
+Route::get('/dashboard/books', function () {
+    return Inertia::render('Dashboard/Books');
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.books');
+
+Route::get('/dashboard/books/add', function () {
+    return Inertia::render('Dashboard/AddBook');
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.books.add');
+
+
+Route::get('/dashboard/users/add', function () {
+    return Inertia::render('Dashboard/AddUser');
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.users.add');
+
+Route::get('/dashboard/books/{book}/edit', function (Book $book) {
+    dd($book);
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.books.edit');
+
+Route::get('/dashboard/books/{user}/favorites', function (User $user) {
+    return Inertia::render('Dashboard/ShowUserFavorites', [
+        'user' => $user,
+    ]);
+})->middleware(['auth', 'verified', 'role:admin'])->name('dashboard.books.user.favorites');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

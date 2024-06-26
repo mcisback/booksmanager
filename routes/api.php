@@ -15,6 +15,8 @@ Route::name('api.')->middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('books', BookController::class)->except('index');
 });
 
+Route::get('users/{user}/favorites', [BookController::class, 'getUserFavorites'])->name('api.books.user.favorites');
+
 Route::name('api.')->middleware(['auth:sanctum', 'role:admin'])->group(function () {
     Route::apiResource('users', UserController::class);
 });
