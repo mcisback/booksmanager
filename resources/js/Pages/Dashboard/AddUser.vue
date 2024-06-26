@@ -7,6 +7,7 @@ const form = {
     name: '',
     email: '',
     password: '',
+    role: 'user',
 }
 
 let response = null
