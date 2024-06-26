@@ -30,6 +30,8 @@ class UsersTableSeeder extends Seeder
         );
         $admin->assignRole($adminRole);
 
+        $admin->createToken('default');
+
         // Create regular user
         $user = User::firstOrCreate(
             ['email' => 'user@books.local'],
@@ -39,5 +41,7 @@ class UsersTableSeeder extends Seeder
             ]
         );
         $user->assignRole($userRole);
+
+        $user->createToken('default');
     }
 }

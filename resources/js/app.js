@@ -13,10 +13,15 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
     setup({ el, App, props, plugin }) {
-        return createApp({ render: () => h(App, props) })
+        const vueApp = createApp({ render: () => h(App, props) })
             .use(plugin)
-            .use(ZiggyVue)
-            .mount(el);
+            .use(ZiggyVue);
+
+        vueApp.config.globalProperties.$apiEndpoint = import.meta.env.VITE_API_ENDPOINT;
+
+        vueApp.mount(el);
+
+        return vueApp;
     },
     progress: {
         color: '#4B5563',

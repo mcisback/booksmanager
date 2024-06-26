@@ -6,12 +6,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Overtrue\LaravelFavorite\Traits\Favoriter;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
     use HasRoles;
+    use HasApiTokens;
+    use Favoriter;
 
     /**
      * The attributes that are mass assignable.
